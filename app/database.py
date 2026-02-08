@@ -1,0 +1,13 @@
+"""Подключение к БД: engine, фабрика сессий, базовый класс моделей."""
+
+from sqlalchemy import create_engine
+from sqlalchemy.orm import DeclarativeBase, sessionmaker
+
+from app.config import settings
+
+engine = create_engine(settings.database_url)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+
+class Base(DeclarativeBase):
+    """Базовый класс для всех ORM-моделей."""

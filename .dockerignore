@@ -1,0 +1,13 @@
+__pycache__
+*.py[cod]
+.env
+.git
+.gitignore
+.venv
+venv
+*.egg-info
+.idea
+.vscode
+.pytest_cache
+htmlcov
+.coverage
